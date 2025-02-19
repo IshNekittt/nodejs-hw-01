@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 
 export const readContacts = async () => {
   const data = await fs.readFile(PATH_DB, {
-    mode: 'utf8',
+    encoding: 'utf8',
   });
   return JSON.parse(data);
 };
